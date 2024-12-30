@@ -19,5 +19,4 @@ Rails.application.routes.draw do
   end
 
   resource :unsubscribe, only: [ :show ]
-
 end
