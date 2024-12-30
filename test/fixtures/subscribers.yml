@@ -2,7 +2,7 @@
 
 one:
   product: one
-  email: MyString
+  email: to@example.org
 
 two:
   product: two
