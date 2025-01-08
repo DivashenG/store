@@ -9,43 +9,159 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+/* Base styles */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #2C2C2C; /* Dark background */
+  padding: 0;
+  color: #EEE; /* Lighter text color for contrast */
 }
 
-nav {
-  justify-content: flex-end;
-  display: flex;
-  font-size: 0.875em;
-  gap: 0.5rem;
-  max-width: 1024px;
-  margin: 0 auto;
+/* Header styles */
+header {
+  background-color: #333; /* Darker header background */
+  color: #FF6F00; /* Orange text color */
   padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #212121; /* Even darker background */
 }
 
 nav a {
-  display: inline-block;
+  color: #FF6F00; /* Orange link color */
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
 }
 
+nav a:hover {
+  background-color: #FF6F00; /* Highlight on hover */
+  color: #212121; /* Dark text on hover for contrast */
+}
+
+/* Visited links styles */
+nav a:visited {
+  color: #FF9800; /* Light orange for visited links */
+  text-decoration: none; /* Ensure no underlines remain on visited links */
+}
+
+/* Main content styles */
 main {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-.notice {
-  color: green;
-}
-
-section.product {
-  display: flex;
-  gap: 1rem;
-  flex-direction: row;
-}
-
-section.product img {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: #333; /* Dark background for content */
   border-radius: 8px;
-  flex-basis: 50%;
-  max-width: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow */
 }
 
+/* Footer styles */
+footer {
+  text-align: center;
+  background-color: #212121; /* Dark footer background */
+  color: #FF6F00; /* Orange text color */
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Buttons */
+button {
+  background-color: #FF6F00; /* Orange background */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #FF8C00; /* Slightly lighter orange on hover */
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #555; /* Darker border color */
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #333; /* Dark input backgrounds */
+  color: #EEE; /* Light text inside inputs */
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #FF6F00; /* Orange border on focus */
+  outline: none;
+  box-shadow: 0 0 3px rgba(255, 111, 0, 0.5); /* Orange focus glow */
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table th, table td {
+  border: 1px solid #555; /* Darker table borders */
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #212121; /* Darker table header */
+  color: #FF6F00; /* Orange text for header */
+}
+
+table tr:nth-child(even) {
+  background-color: #444; /* Darker even rows */
+}
+
+table tr:nth-child(odd) {
+  background-color: #333; /* Dark odd rows */
+}
+
+/* General link styles for link_to */
+a {
+  color: #ecb8aa; /* Base color matching the heading color */
+  text-decoration: underline;
+  font-weight: normal; /* Keep text weight normal */
+  transition: color 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+/* Hover state for links */
+a:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #FFB74D; /* Light orange color on hover */
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Visited links state */
+a:visited {
+  color: #FFFFFF83; /* Muted version of the base color for visited links */
+}
+
+/* Active state when the link is clicked */
+a:active {
+  color: #FF9800; /* Bright orange color for active links */
+}
+
+/* Focus state for accessibility */
+a:focus {
+  outline: 2px solid #FFB74D; /* Light orange outline for focus */
+  outline-offset: 2px; /* Slight offset for better visibility */
+}
